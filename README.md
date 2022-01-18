@@ -1,1 +1,2 @@
-# Studying how params work on express!
+# Params
+Studying how params work on express!
