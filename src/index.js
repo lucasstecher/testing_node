@@ -45,5 +45,16 @@ app.post('/body_params', (req, res) => {
     return res.json(accounts);
 });
 
+// Pegar informação através dos headers
+app.post('/headers', (req, res) => {
+    const { cpf } = req.headers;
+    if( cpf ) {
+        console.log(cpf);
+        return res.status(201).send({message: "success"});
+    }
+    return res.status(400).send({message: "Error"});
+})
+
 
 app.listen(PORT);
+console.log("Server started at PORT:" + PORT);
